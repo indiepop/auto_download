@@ -18,9 +18,10 @@ class Download
   0.upto(1).each do |i|
 
      unless FileUtils.cmp news[i] ,olds[i]
-         puts "Now ,downloading #{ news[i]}..."
+
+      puts "Now ,the time is #{Time.now}, downloading #{ news[i]}..."
           Download.down news[i]
-         puts "Finished the #{i}"
+         puts "End, the time is #{Time.now}, Finished the #{i}"
      end
   end
   end
